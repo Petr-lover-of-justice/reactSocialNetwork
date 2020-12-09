@@ -1,13 +1,14 @@
 import React from "react";
-
+import classes from"./header.module.css"
 
 const Header =()=>{
   return(
   <div>
-       <header>
-        <div className="Header">
-          <img src =""alt="Patric" />
-        </div>
+       <header className={classes.Header}>
+       
+          <p className="bed">тут дурацкий текст</p>
+          <p className="bed_2">тут тоже </p>
+        
       </header>
   </div>
   );
