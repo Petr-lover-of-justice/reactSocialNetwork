@@ -4,9 +4,9 @@ import classes from"./header.module.css"
 const Header =()=>{
   return(
   <div>
-       <header className={classes.Header}>
+       <header className="Header">
        
-          <p className="bed">тут дурацкий текст</p>
+          <p className="bed">шапка</p>
           <p className="bed_2">тут тоже </p>
         
       </header>

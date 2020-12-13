@@ -1,0 +1,43 @@
+.all{
+  /* box-sizing: border-box; */
+
+  background-color: rgb(96, 253, 5);
+  max-width: 1300px;
+   display: grid;
+   grid-template-columns: 5fr 15fr;
+   max-width:1500px;
+
+}
+.dialog{
+  
+}
+.text{
+  color: rgb(45, 100, 252);
+  padding: 10px;
+
+}
+.text_2{
+  color: rgb(35, 39, 243);
+  padding: 10px;
+}
+
+.messedger{
+
+}
+a{
+  text-decoration: none;
+}
+.all .active a{
+
+  color: rgb(255, 0, 200);
+
+  font-family: 'Times New Roman', Times, serif;
+
+text-decoration: none;
+
+}
+
+.dialog .active {
+
+  color: brown;
+}
