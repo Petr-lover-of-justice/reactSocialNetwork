@@ -62,9 +62,9 @@
 
 .Header{
   /* grid-area: header; */
-  background-color: #13CE66;
-  width: 1955px;
-  height: 74px;
+  background-color: #000000;
+  max-width: 1955px;
+  height: 100px;
   margin: 10px;
 }
 
@@ -75,13 +75,14 @@
 
 p{
   font-size: 30;
-  color:pink;
+  color:rgb(255, 255, 255);
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .file{
-  background-color: cornflowerblue;
+  background-color: rgb(211, 88, 88);
 
-  width: 1512px;
+  max-width: 2000px;
 }
 .file img{
   height: 500px;

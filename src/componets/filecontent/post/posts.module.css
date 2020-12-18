@@ -1,0 +1,31 @@
+
+.main{
+  background-color: rgb(165, 165, 165);
+}
+
+
+.like{
+  display: flex;
+}
+.nameusers{
+  padding: 5px;
+  padding-top:40px ;
+}
+.postimg img{
+  width: 150px;
+height: 100px;
+  border-radius: 20px;
+  padding: 10px;
+}
+.button{
+  padding-left: 90px ;
+}
+.allposts{
+  padding-left: 50px;
+}
+.posrs{
+  background-color: aqua;
+}
+.nameusers p{
+  color:black;
+}
