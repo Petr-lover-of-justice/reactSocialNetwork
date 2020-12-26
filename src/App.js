@@ -18,13 +18,13 @@ const App = () => {
           <Header />
           <div className="center">
           <Navbar />
-            <Route path="/dialog" component={Dialog} />
+            {/* <Route path="/dialog" component={Dialog} />
             <Route path="/profile" component={Profile} />
-            <Route path="/new" component={New} />
+            <Route path="/new" component={New} /> */}
             
-
-            {/* <Profile /> */}
-            {/* <Dialog /> */}
+            <Route path="/dialog" render={()=><Dialog />} />
+            <Route path="/profile" render={()=><Profile />} />
+            <Route path="/new" render={()=><New />} />
           </div>
         </div>
       </div>

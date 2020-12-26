@@ -2,6 +2,11 @@ import React from "react";
 import e from "./posts.module.css";
 
 const Posts = (props) => {
+  // let messedgedata = [
+  //   { id: 1, messedge: "my ferst post", likepost: "  лайк 3" },
+  //   { id: 2, messedge: "завали хлебальник", likepost: "  лайк 1160" },
+  // ];
+  // let messedgeElement = props.messedgedata.map( p => <Posts messedge={p.messedge} likepost={p.likepost} />)
  
   return (
     <div className={e.main}>
@@ -15,9 +20,11 @@ const Posts = (props) => {
         </div>
         <div className={e.nameusers}>
           <p>natalie mars</p>
-          {props.messedger}
+          {props.messedge}
           {props.likepost}
+          
         </div>
+        {/* <div>{messedgeElement}</div> */}
       </div>
       <div className={e.allposts}>
         <div>
@@ -26,8 +33,7 @@ const Posts = (props) => {
         <div className={e.button}>
           <button className>отправить пост</button>
         </div>
-        <div className={e.posts}>
-      </div>
+        <div className={e.posts}></div>
       </div>
     </div>
   );
