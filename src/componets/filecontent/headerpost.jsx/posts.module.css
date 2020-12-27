@@ -1,0 +1,12 @@
+
+.main{
+  background-color: burlywood;
+  max-width: 700px;
+}
+.titleimg img{
+  width:700px;
+  height: 30%;
+}
+.titleword p{
+  color: black;
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import f from "./profile.module.css";
 import Home from "./home/home";
-import Posts from "./post/posts";
+// import Posts from "./posts/posts";
+import Titlepost from './headerpost.jsx/titlepost';
 const Profile = () => {
   // let messedgedata = [
   //   { id: 1, messedge: "my ferst post", likepost: "  лайк 3" },
@@ -14,6 +15,7 @@ const Profile = () => {
 
   return (
     <div>
+    <Titlepost />
       <Home />
       {/* <Posts messedgedata={messedgedata}/> */}
        {/* <Posts Posts={messedgedata} />

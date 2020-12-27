@@ -19,14 +19,15 @@ const Posts = (props) => {
           />
         </div>
         <div className={e.nameusers}>
-          <p>natalie mars</p>
-          {props.messedge}
-          {props.likepost}
+          <span>natalie mars{props.likepost}</span>
+          
+          
           
         </div>
+        <div>{props.messedge}</div>
         {/* <div>{messedgeElement}</div> */}
       </div>
-      <div className={e.allposts}>
+      {/* <div className={e.allposts}>
         <div>
           <input type="text" />
         </div>
@@ -34,7 +35,7 @@ const Posts = (props) => {
           <button className>отправить пост</button>
         </div>
         <div className={e.posts}></div>
-      </div>
+      </div> */}
     </div>
   );
 };
