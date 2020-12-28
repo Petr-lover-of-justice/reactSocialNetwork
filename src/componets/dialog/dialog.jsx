@@ -25,27 +25,26 @@ import Messedge from './messedge/messege';
 //   )
 // }
 
-const Dialog = () => {
+const Dialog = (props) => {
 
-  let DialogData = [
-    {id: "1", name: "Екатерина"},
-    {id: "2", name: "Игорь"},
-    {id: "3", name: "Анна"},
-    {id: "4", name: "Егор"},
-  ]
-  let dialogelement = DialogData
-   .map (dialog => <Items name={dialog.name} id={dialog.id}/>)
+  // let DialogData = [
+  //   {id: "1", name: "Екатерина"},
+  //   {id: "2", name: "Игорь"},
+  //   {id: "3", name: "Анна"},
+  //   {id: "4", name: "Егор"},
+  // ]
+  let dialogelement = props.DialogData.map (dialog => <Items name={dialog.name} id={dialog.id}/>)
   
-  let messedgeData =
-  [
-    {id: "1", messedge: "Привет"},
-    {id: "2", messedge: "Привет"},
-    {id: "3", messedge: "Пошел в попу"},
-    {id: "4", messedge: "Ты же первая написала."},
+  // let messedgeData =
+  // [
+  //   {id: "1", messedge: "Привет"},
+  //   {id: "2", messedge: "Привет"},
+  //   {id: "3", messedge: "Пошел в попу"},
+  //   {id: "4", messedge: "Ты же первая написала."},
     
-  ]
+  // ]
   // id={m.id}
-  let messedgeelement = messedgeData
+  let messedgeelement = props.messedgeData
   .map (m => <Messedge messedges={m.messedge} />)
   return (
      

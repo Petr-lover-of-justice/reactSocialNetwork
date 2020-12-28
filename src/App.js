@@ -1,5 +1,4 @@
 import logo from "./logo.svg";
-// import "./App.css";
 import "./App.css";
 import React from "react";
 import Header from "./componets/header/header";
@@ -8,9 +7,14 @@ import Profile from "./componets/filecontent/profile";
 import Dialog from "./componets/dialog/dialog";
 import { BrowserRouter, Route } from "react-router-dom";
 import New from "./componets/new/new"
-import Home from './componets/filecontent/home/home';
+// import Home from './componets/filecontent/home/home';
 
-const App = () => {
+const App = (props) => {
+  // let messedgedata = [
+  //   { id: 1, messedge: "my ferst post", likepost: "  лайк 3" },
+  //   { id: 2, messedge: "завали хлебальник", likepost: "  лайк 1160" },
+  // ];
+ 
   return (
     <BrowserRouter>
       <div>
@@ -22,14 +26,14 @@ const App = () => {
             <Route path="/profile" component={Profile} />
             <Route path="/new" component={New} /> */}
             
-            <Route path="/dialog" render={()=><Dialog />} />
-            <Route path="/profile" render={()=><Profile />} />
+            <Route path="/dialog" render={()=><Dialog DialogData={props.state.DialogData} messedgeData={props.state.messedgeData}/>}  />
+            <Route path="/profile" render={()=><Profile messedgedata={props.state.messedgedata} />} />
             <Route path="/new" render={()=><New />} />
           </div>
         </div>
       </div>
     </BrowserRouter>
-  );
-};
+  )
+}
 
 export default App;
