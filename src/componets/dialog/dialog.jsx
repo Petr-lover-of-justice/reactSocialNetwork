@@ -27,25 +27,16 @@ import Messedge from './messedge/messege';
 
 const Dialog = (props) => {
 
-  // let DialogData = [
-  //   {id: "1", name: "Екатерина"},
-  //   {id: "2", name: "Игорь"},
-  //   {id: "3", name: "Анна"},
-  //   {id: "4", name: "Егор"},
-  // ]
+
   let dialogelement = props.DialogData.map (dialog => <Items name={dialog.name} id={dialog.id}/>)
   
-  // let messedgeData =
-  // [
-  //   {id: "1", messedge: "Привет"},
-  //   {id: "2", messedge: "Привет"},
-  //   {id: "3", messedge: "Пошел в попу"},
-  //   {id: "4", messedge: "Ты же первая написала."},
-    
-  // ]
-  // id={m.id}
   let messedgeelement = props.messedgeData
   .map (m => <Messedge messedges={m.messedge} />)
+  let newMessageElement=React.createRef()
+  let addMessage =()=>{
+    let message = newMessageElement.current.value
+    alert(message)
+  }
   return (
      
     <div className={dialog.all}>
@@ -56,7 +47,7 @@ const Dialog = (props) => {
       <Items name={DialogData[1].name} id={DialogData[1] .id}/>
       <Items name={DialogData[2].name} id={DialogData[2] .id}/>
       <Items name={DialogData[3].name} id={DialogData[3] .id}/> */}
-     
+    
       </div>
       <div className={dialog.messedge}>
       {messedgeelement}
@@ -64,6 +55,12 @@ const Dialog = (props) => {
         <Messedger messedgers={messedgerData[1].messedger} />
         <Messedger messedgers={messedgerData[2].messedger} />
         <Messedger messedgers={messedgerData[3].messedger} /> */}
+      </div>
+      <div>
+        <textarea ref={newMessageElement}></textarea>
+      </div>
+      <div>
+        <button onClick={addMessage}>отправить сообщение</button>
       </div>
     </div>
   );

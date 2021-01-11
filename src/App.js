@@ -8,6 +8,7 @@ import Dialog from "./componets/dialog/dialog";
 import { BrowserRouter, Route } from "react-router-dom";
 import New from "./componets/new/new"
 // import Home from './componets/filecontent/home/home';
+import { addPost } from './componets/reduxa/state';
 
 const App = (props) => {
   // let messedgedata = [
@@ -26,13 +27,13 @@ const App = (props) => {
             <Route path="/profile" component={Profile} />
             <Route path="/new" component={New} /> */}
             
-            <Route path="/dialog" render={()=><Dialog DialogData={props.state.DialogData} messedgeData={props.state.messedgeData}/>}  />
-            <Route path="/profile" render={()=><Profile messedgedata={props.state.messedgedata} />} />
+            <Route path="/dialog" render={()=><Dialog DialogData={props.state.DialogData} messedgeData={props.state.messedgeData} />}   />
+            <Route path="/profile" render={()=><Profile messedgedata={props.state.messedgedata} addPost={props.state.messedgedata.messedgedata}/>} />
             <Route path="/new" render={()=><New />} />
           </div>
         </div>
       </div>
-    </BrowserRouter>
+      </ BrowserRouter>
   )
 }
 

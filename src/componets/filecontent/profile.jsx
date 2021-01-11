@@ -3,6 +3,7 @@ import f from "./profile.module.css";
 import Home from "./home/home";
 // import Posts from "./posts/posts";
 import Titlepost from './headerpost.jsx/titlepost';
+// import { addPost } from './../reduxa/state';
 const Profile = (props) => {
   
   // let messedgedata = [
@@ -17,7 +18,7 @@ const Profile = (props) => {
   return (
     <div>
     <Titlepost />
-      <Home messedgedata={props.messedgedata}/>
+      <Home messedgedata={props.messedgedata} addPost={props.addPost}/>
       {/* <Posts messedgedata={messedgedata}/> */}
        {/* <Posts Posts={messedgedata} />
       <Posts messedge={p.messedge} likepost={p.likepost} />  */}

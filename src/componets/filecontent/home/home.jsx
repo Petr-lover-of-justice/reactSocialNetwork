@@ -1,25 +1,32 @@
-import React  from 'react';
-import f from "./home.module.css"
+import React from "react";
+import f from "./home.module.css";
 // import Posts from './../post/posts';
-import Posts from './posts/posts';
+import Posts from "./posts/posts";
+// import { addPost } from './componets/reduxa/state';
 
+const Home = (props) => {
+    
+  let messedgeElement = props.messedgedata.messedgedata.map((p) => (
+    <Posts messedge={p.messedge} likepost={p.likepost} addPost={p.addPost}/>
+  ));
 
-const Home=(props)=>{
-  // let messedgedata =[
-  //   {id:1, messedge:"my ferst post",likepost:"  лайк 3" },
-  //   {id:2, messedge:"завали хлебальник", likepost:"  лайк 1160"}]
-let messedgeElement = props.messedgedata.map( p => <Posts messedge={p.messedge} likepost={p.likepost} />)
-
-
-  return(
+  let newPostElement = React.createRef();//кнопка для показывания
+  let addPost = () => {
+    let text = newPostElement.current.value
+    props.addPost(text);
+  };
+  return (
     <div className="file">
       {/* <img src="https://w-dog.ru/wallpapers/9/11/432054144807159/zakat-vecher-more-nebo-gorizont-solnce-voda-oblaka.jpg"></img> */}
       <div className={f.allposts}>
-        <div>
+        {/* <div>
           <input type="text" />
+        </div> */}
+        <div>
+        <textarea ref={newPostElement}></textarea>
         </div>
         <div className={f.button}>
-          <button className>отправить пост</button>
+          <button onClick={addPost}>отправить пост</button>
         </div>
         <div className={f.posts}></div>
       </div>
@@ -27,9 +34,7 @@ let messedgeElement = props.messedgedata.map( p => <Posts messedge={p.messedge} 
       {/* <Posts messedger={messedgedata[0].messedger} likepost = {messedgedata[0].likepost} />
       <Posts messedger={messedgedata[1].messedger} likepost = {messedgedata[1].likepost}/>
    */}
-
     </div>
-    
   );
-}
+};
 export default Home;

@@ -4,7 +4,7 @@ import classes from"./header.module.css"
 const Header =()=>{
   return(
   <div>
-       <header className="Header">
+       <header className={classes.header}>
        
           <p className="bed">шапка</p>
           <p className="bed_2">тут тоже </p>
